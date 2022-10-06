@@ -22,7 +22,7 @@
                 <div class="col-md-4 d-flex justify-content-between">
                     <!-- for to do -->
                     <div class="example-container">
-                        <h2 class="head-title">To do</h2>
+                        <h2   class="head-title" >To do <span  *ngIf="todo.length > 0 " >- {{todo.length}} </span></h2>
                         <div
                           cdkDropList
                           [cdkDropListData]="todo"
@@ -41,7 +41,7 @@
                 <div class="col-md-4 d-flex justify-content-between">
                     <!-- for doing -->
                     <div class="example-container">
-                        <h2 class="head-title">Doing </h2>
+                        <h2 class="head-title"> Doing <span *ngIf="doing.length > 0 "> - {{doing.length}}</span> </h2>
                         <div
                           cdkDropList
                           [cdkDropListData]="doing"
@@ -57,7 +57,7 @@
                 <div class="col-md-4">
                     <!-- for done -->
                     <div class="example-container">
-                        <h2 class="head-title">Done </h2>
+                        <h2 class="head-title">Done <span *ngIf="done.length > 0 "> - {{done.length}}</span> </h2>
                         <div
                           cdkDropList
                           [cdkDropListData]="done"
